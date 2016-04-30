@@ -15,7 +15,9 @@ RUN pip install image
 RUN apt-get build-dep python-imaging
 RUN apt-get install libjpeg62 libjpeg62-dev
 
-RUN wget -O /usr/bin/baidumount https://github.com/ly0/baidu-fuse/raw/master/baidufuse.py
+#RUN wget -O /usr/bin/baidumount https://github.com/ly0/baidu-fuse/raw/master/baidufuse.py
+#RUN wget -O /usr/bin/baidumount https://github.com/feilongfl/calibre-withbaiduyun/raw/master/baidufuse.py
+ADD baidufuse.py /usr/bin/baidumount
 RUN chmod +x /usr/bin/baidumount
 
 RUN pcs login --username=gang --password=123456

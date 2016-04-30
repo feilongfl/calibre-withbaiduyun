@@ -25,7 +25,7 @@ except:
     import Image
     pass
 
-def captcha_get(img)
+def captcha_get(img):
     jpeg_data = StringIO(img)
     im = Image.open(jpeg_data)
     im.convert('RGB').save("/tmp/captcha.jpg")
